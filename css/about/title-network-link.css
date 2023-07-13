@@ -1,0 +1,10 @@
+.title__network__link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.title__network__link:hover {
+    font-size: 17.5px;
+    font-weight: bold;
+    color: #a52a2a;
+}

@@ -1,0 +1,5 @@
+.title__network {
+    display: flex;
+    list-style: none;
+    margin-top: 1.5rem;
+}

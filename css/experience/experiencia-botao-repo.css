@@ -1,0 +1,12 @@
+.experiencia__botao__repo {
+    border-color: #2A7AE4;
+    color: #2A7AE4;
+    margin-right: .5rem;
+    padding: 12px 20px;
+    transition: all .1s ease-in-out;
+}
+
+.experiencia__botao__repo:hover {
+    cursor: pointer;
+    background: #e8e8e8;
+}

@@ -1,0 +1,11 @@
+.experience__botao__demo {
+    background-color: #2A7AE4;
+    color: white;
+    padding: 12px 20px;
+    transition: all .1s ease-in-out;
+}
+
+.experience__botao__demo:hover {
+    cursor: pointer;
+    background: blue;
+}

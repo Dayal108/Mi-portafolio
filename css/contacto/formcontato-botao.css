@@ -1,0 +1,12 @@
+.formcontato__botao {
+    margin-top: 1.8rem;
+    width: 150px;
+    padding: 15px ;
+    border: none;
+    color: #fff;
+    background: #2A7AE4;
+}
+
+.formcontato__botao:hover {
+    cursor: pointer;
+}
