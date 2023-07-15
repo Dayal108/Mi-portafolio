@@ -1,85 +1,48 @@
-function validarNombre() {
-    var nombreInput = document.getElementById("nombre");
-    var errorNombre = document.getElementById("error-nombre");
+function validarCampo(inputId, errorId, mensajeVacio, mensajeMaximo, validarEmail = false) {
+  var input = document.getElementById(inputId);
+  var error = document.getElementById(errorId);
+  var valor = input.value.trim();
   
-    if (nombreInput.value.trim() === "") {
-      errorNombre.textContent = "El campo 'Nombre' no debe estar vacío.";
-      return false;
-    }
-  
-    if (nombreInput.value.length > 50) {
-      errorNombre.textContent = "El campo 'Nombre' debe tener máximo 50 caracteres.";
-      return false;
-    }
-  
-    errorNombre.textContent = "";
-    return true;
+  if (valor === "") {
+    error.textContent = mensajeVacio;
+    return false;
   }
   
-  function validarEmail() {
-    var emailInput = document.getElementById("email");
-    var errorEmail = document.getElementById("error-email");
-  
-    if (emailInput.value.trim() === "") {
-      errorEmail.textContent = "El campo 'Email' no debe estar vacío.";
-      return false;
-    }
-  
-    if (emailInput.value.indexOf("@") === -1 || emailInput.value.indexOf(".") === -1) {
-      errorEmail.textContent = "El campo de 'Email' debe tener un '@' y un '.' al final.";
-      return false;
-    }
-  
-    errorEmail.textContent = "";
-    return true;
+  if (valor.length > 50) {
+    error.textContent = mensajeMaximo;
+    return false;
   }
   
-  function validarAsunto() {
-    var asuntoInput = document.getElementById("asunto");
-    var errorAsunto = document.getElementById("error-asunto");
-  
-    if (asuntoInput.value.trim() === "") {
-      errorAsunto.textContent = "El campo 'Asunto' no debe estar vacío.";
-      return false;
-    }
-  
-    if (asuntoInput.value.length > 50) {
-      errorAsunto.textContent = "El campo 'Asunto' debe tener máximo 50 caracteres.";
-      return false;
-    }
-  
-    errorAsunto.textContent = "";
-    return true;
+  if (validarEmail && (!valor.includes("@") || !valor.includes("."))) {
+    error.textContent = "El campo de 'Email' debe tener un '@' y un '.' al final.";
+    return false;
   }
   
-  function validarMensaje() {
-    var mensajeInput = document.getElementById("mensaje");
-    var errorMensaje = document.getElementById("error-mensaje");
-  
-    if (mensajeInput.value.trim() === "") {
-      errorMensaje.textContent = "El campo 'Mensaje' no debe estar vacío.";
-      return false;
-    }
-  
-    if (mensajeInput.value.length > 300) {
-      errorMensaje.textContent = "El campo 'Mensaje' debe tener máximo 300 caracteres.";
-      return false;
-    }
-  
-    errorMensaje.textContent = "";
-    return true;
+  error.textContent = "";
+  return true;
+}
+
+function validarFormulario() {
+  var nombreValido = validarCampo("nombre", "error-nombre", "El campo 'Nombre' no debe estar vacío.", "El campo 'Nombre' debe tener máximo 50 caracteres.");
+  var emailValido = validarCampo("email", "error-email", "El campo 'Email' no debe estar vacío.", "El campo de 'Email' debe tener máximo 50 caracteres.", true);
+  var asuntoValido = validarCampo("asunto", "error-asunto", "El campo 'Asunto' no debe estar vacío.", "El campo 'Asunto' debe tener máximo 50 caracteres.");
+  var mensajeValido = validarCampo("mensaje", "error-mensaje", "El campo 'Mensaje' no debe estar vacío.", "El campo 'Mensaje' debe tener máximo 300 caracteres.");
+
+  return nombreValido && emailValido && asuntoValido && mensajeValido;
+}
+
+var formulario = document.querySelector("form[name='form']");
+
+formulario.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (validarFormulario()) {
+    console.log("Mensaje enviado");
+    formulario.submit();
+
+    var botonEnviar = document.querySelector(".formcontato__botao");
+    botonEnviar.style.display = "none";
+  } else {
+    console.log("Hay campos no válidos en el formulario");
   }
-  
-  var formulario = document.querySelector("form[name='form']");
-  
-  formulario.addEventListener("submit", function(event) {
-    event.preventDefault();
-  
-    if (validarNombre() && validarEmail() && validarAsunto() && validarMensaje()) {
-      console.log("Mensaje enviado");
-      formulario.submit(); // Envío del formulario
-    } else {
-      console.log("Hay campos no válidos en el formulario");
-    }
-  });
-  
+});
