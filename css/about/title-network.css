@@ -1,5 +1,16 @@
 .title__network {
     display: flex;
     list-style: none;
-    margin-top: 1.5rem;
+    gap: 10px;
+}
+
+.title__network a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.title__network a:hover {
+    font-size: 17.5px;
+    font-weight: bold;
+    color: #a52a2a;
 }

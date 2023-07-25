@@ -1,4 +1,19 @@
 .skills {
-   padding-top: 4rem;
-   padding-bottom: 4rem;
+   padding: 4rem 0;
+}
+
+@media (max-width: 425px) {
+
+   .skills {
+      padding: 2.5rem 0;
+   }
+
+   .skills__line {
+      flex-wrap: wrap;
+   }
+
+   .box{
+      width: 100%;
+   }
+
 }

@@ -1,17 +1,21 @@
-.skills__box {
+.box {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     background: #fff;
     flex: 1;
-    height: 175px;
+    min-width: 175px;
+    max-width: 175px;
+    min-height: 175px;
     margin-right: 10px;
     margin-left: 5px;
-    margin-top: 1.9%;
+    margin-top: 1rem;
     box-shadow: 2px 2px 2px #CCC;
     transition: all .1s ease-in-out;
+    border-radius: 50%;
 }
 
-.skills__box:hover {
+.box:hover {
     background: #e8e8e8;
 }

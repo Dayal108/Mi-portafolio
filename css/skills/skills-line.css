@@ -1,7 +1,6 @@
 .skills__line {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin: 0 0rem 0 0rem;
+    flex-wrap: wrap;
 }

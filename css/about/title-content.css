@@ -1,4 +1,17 @@
 .title__content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60vw;
   }
+
+
+.title__content h1 {
+  font-size: 47px;
+  font-weight: 700;
+}
+
+.title__content p {
+  font-size: 18px;
+  font-weight: 200;
+}

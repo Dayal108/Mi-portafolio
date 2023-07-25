@@ -1,0 +1,16 @@
+.logo {
+    display: block;
+}
+
+@media (max-width: 425px) {
+    
+    .logo{
+        display: none;
+    }
+}
+  
+  
+  
+  
+  
+  

@@ -1,4 +1,27 @@
 .about__container {
-    background-color: #EAF2FD;
-    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.about__container h2 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.about__container p {
+    font-size: 17px;
+    margin: 0;
+}
+
+.about__container p:nth-child(4) {
+    font-size: 15px;
+    font-weight: 700; 
+}
+
+@media (max-width: 425px) {
+
+    .about {
+        padding: 4vw 1rem;
+    }
 }

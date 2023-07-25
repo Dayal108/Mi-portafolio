@@ -1,8 +1,58 @@
 .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 5vw;
+}
+
+.menu h3 {
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.menu header {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 300;
+    transition: all .1s ease-in-out;
+}
+
+.menu__list__link.activo {
+    color: #333333;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    color: #8b008b;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 425px) {
+  .menu h3 {
+    display: none;
+  }
+
+  .menu ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    flex-direction: column;
+    justify-content: right;
+    text-align: right;
+  }
 }

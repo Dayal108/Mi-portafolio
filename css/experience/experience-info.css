@@ -1,3 +1,14 @@
 .experience__info {
     align-self: center;
+    text-align: center;
+}
+
+.experience__info h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.experience__info h3 {
+    font-size: 13.5px;
+    margin: 4px 0;
 }

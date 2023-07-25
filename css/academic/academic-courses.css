@@ -1,5 +1,7 @@
 .academic__courses {
     display: flex;
-    margin: 3.5rem 8rem;
+    margin: 2.7rem 8rem 0 8rem;
     justify-content: space-evenly;
+    gap: 30px;
 }
+

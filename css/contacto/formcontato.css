@@ -1,3 +1,18 @@
 .formcontato {
     background: #EAF2FD;
 }
+
+@media (max-width: 425px) {
+
+    .formcontato__izquierda {
+        display: none;
+    }
+
+    .formcontato__general {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: 0 0 3rem 2rem; 
+    }
+
+}

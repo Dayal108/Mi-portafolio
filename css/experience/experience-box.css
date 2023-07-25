@@ -1,5 +1,8 @@
 .experience__box {
     display: flex;
-    margin: auto 8rem;
-    margin-top: 3rem;
+}
+
+.experience__box img {
+    margin: 1rem;
+    box-shadow: 2px 2px 2px grey;
 }
