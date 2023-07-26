@@ -1,11 +1,28 @@
 .hobbies__line {
     display: flex;
     justify-content: center;
-    margin: 0 8rem 5rem 8rem;
+    margin: 0 8rem 4rem 8rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+
+    .hobbies__line {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 0rem 4rem 0rem;
+    }
+
 }
 
 @media (max-width: 425px) {
+
     .hobbies__line {
+        display: flex;
+        justify-content: center;
         flex-wrap: wrap;
+        margin: 0 0rem 4rem 0rem;
     }
+
 }

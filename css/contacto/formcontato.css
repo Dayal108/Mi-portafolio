@@ -2,6 +2,25 @@
     background: #EAF2FD;
 }
 
+@media (max-width: 768px) {
+
+    .formcontato__izquierda {
+        display: flex;
+        align-items: center;
+    }
+
+    .formcontato__img {
+        height: 250px;
+        width: 250px;
+        border-radius: 80%;
+    }
+
+    .formcontato__botao {
+        display: flex;
+        margin-bottom: 4vh;
+    }
+}
+
 @media (max-width: 425px) {
 
     .formcontato__izquierda {
@@ -13,6 +32,11 @@
         flex-direction: column;
         justify-content: left;
         margin: 0 0 3rem 2rem; 
+    }
+
+    .formcontato__botao {
+        display: flex;
+        margin-top: 1vh;
     }
 
 }

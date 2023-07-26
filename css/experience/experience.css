@@ -10,6 +10,27 @@
     margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+    .experience h1 {
+        display: flex;
+        text-align: center;
+    }
+
+    .experience__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experience__two {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .experience__botao__demo {
+        margin-bottom: 1rem;
+    }
+}
+
 @media (max-width: 425px) {
 
     .experience h1 {

@@ -3,6 +3,16 @@
     padding: 3rem 8vw 4rem 8vw;
 }
 
+@media (max-width: 768px) {
+    .academic__courses {
+        flex-wrap: wrap;
+    }
+
+    .academic__courses__item__img{
+        max-width: 450px;
+    }
+}
+
 @media (max-width: 425px) {
     .academic__courses {
         flex-wrap: wrap;

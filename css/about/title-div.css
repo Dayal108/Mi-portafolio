@@ -1,13 +1,41 @@
 .title__div {
     display: flex;
     align-items: center;
-    margin: 2.5vw 8vw;
+    margin: 3rem 8vw;
+  }
+
+  @media (max-width: 768px) {
+
+    .title__div {
+      display: flex;
+      margin: 1rem 0vw 3vw 3vw;
+    }
+
+    .title__network {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .title__network li {
+      flex: 1;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   @media (max-width: 425px) {
     
     .title__div {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .title__content h1 {
+      margin: 2rem -12vw 0 0;
+    }
+
+    .title__content p {
+      margin: 0 -12vw 0 0;
     }
 
     .title__profile {
